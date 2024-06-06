@@ -22,10 +22,10 @@ export const impressionHandler = (reporting) => {
   }
 }
 
-const API_HOST = `https://api-staging.saas-dev.beescloud.com`
+//const API_HOST = `https://api-staging.saas-dev.beescloud.com`
 const options = {
   configurationFetchedHandler: configurationFetchedHandler,
-  impressionHandler: impressionHandler,
+  impressionHandler: impressionHandler/*,
   configuration: {
     API_HOST: API_HOST,
     CD_API_ENDPOINT: `${API_HOST}/device/get_configuration`,
@@ -37,7 +37,7 @@ const options = {
     NOTIFICATIONS_ENDPOINT: 'https://api-staging.saas-dev.beescloud.com/sse'
   },
   debugLevel: 'verbose',
-  disableSignatureVerification: true
+  disableSignatureVerification: true*/
 }
 
 Rox.setCustomBooleanProperty('isBetaUser', betaAccess())
@@ -45,5 +45,5 @@ Rox.setCustomBooleanProperty('isLoggedIn', isLoggedIn())
 Rox.setCustomStringProperty('company', getCompany())
 
 Rox.register('default', Flags)
-Rox.setup('5d0a90be-6adb-4483-6e60-b73764bb0942', options)
+Rox.setup('77595cdd-4d44-42b4-57eb-9d36b19a03e2', options)
 //Rox.setup(process.env.VUE_APP_ROLLOUT_KEY, options)
